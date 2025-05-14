@@ -1,4 +1,4 @@
-// server.js
+// npm start
 const http = require('http');
 const Produto = require('./rotas/produtos');
 
@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
   if (url === '/' && method === 'GET') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('Servidor Node.js');
+    res.end('Servidor Node.js use /produtos para acessar os produtos');
   } 
   // Rota para listar produtos
   else if (url === '/produtos' && method === 'GET') {
