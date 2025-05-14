@@ -11,28 +11,13 @@ class Produto {
   }
 
   static adicionarProduto(produto) {
-    const novoId = produtos.length > 0 ? Math.max(...produtos.map(p => p.id)) + 1 : 1;
-    const novoProduto = new Produto(novoId, produto.nome, produto.valor);
-    produtos.push(novoProduto);
-    return JSON.stringify({ 
-      mensagem: 'Produto adicionado com sucesso',
-      produto: novoProduto
-    });
+    produtos.push(produto);
+    return JSON.stringify({ mensagem: 'Produto adicionado com sucesso' });
   }
 
-  static removerProduto(id) {
-    const index = produtos.findIndex(p => p.id === id);
-    if (index === -1) {
-      return JSON.stringify({ 
-        mensagem: 'Produto não encontrado',
-        error: true
-      });
-    }
-    const [removido] = produtos.splice(index, 1);
-    return JSON.stringify({ 
-      mensagem: 'Produto removido com sucesso',
-      produto: removido
-    });
+  static removerProduto() {
+    produtos.pop();
+    return JSON.stringify({ mensagem: 'Produto removido com sucesso' });
   }
 }
 
