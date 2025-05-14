@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
   if (url === '/' && method === 'GET') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    res.end('<p>Servidor Node.js use <a href="http://127.0.0.1:3000/produtos">/produtos</a> para acessar os produtos</p>');
+    res.end(`<p>Servidor Node.js use <a href="http://127.0.0.1:3000/produtos">/produtos</a> para acessar os produtos</p>`);
   } 
   // Rota para listar produtos
   else if (url === '/produtos' && method === 'GET') {
