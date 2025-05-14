@@ -1,0 +1,19 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Matheus de Sousa",
+  "license": "ISC",
+  "description": "Servidor node.js basico.",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "espress": "^0.0.0"
+  }
+}
