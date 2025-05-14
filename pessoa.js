@@ -51,3 +51,25 @@ gerenteAuxiliar.nome = 'Alice';
 
 console.log(gerente1.nome);       // Alice
 console.log(gerenteAuxiliar.nome); // Alice
+
+class Carro {
+    static frear() {
+        console.log(`está freando.`);
+    }
+
+    static acelerar() {
+        console.log(`está acelerando.`);
+    }
+    static ligar() {
+        console.log(`está ligado.`);
+    }
+    static ligarSeta(direcao) {
+        console.log(`seta ligada para.` + direcao);
+    }
+}
+
+Carro.acelerar();
+Carro.frear();
+Carro.ligar();
+Carro.ligarSeta('direita');
+Carro.ligarSeta('esquerda');
